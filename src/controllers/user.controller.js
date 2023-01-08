@@ -38,7 +38,7 @@ export const updateUserById = async (req, res) => {
 
           if (
             existeEmail &&
-            existeEmail === body.email &&
+            existeEmail.email === body.email &&
             existeEmail._id != _id
           ) {
             return res.status(400).json({
